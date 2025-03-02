@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ai-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+gemini:
+  api:
+    key: AIzaSyACAslS_oangWT2_TBM4AS19lTwkkq5J3I

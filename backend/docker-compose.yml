@@ -1,0 +1,42 @@
+services:
+  ai-service:
+    image: ai-service  # Use the image you built locally with the tag 'ai-service'
+    container_name: ai-service
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    depends_on:
+      - eureka-service
+
+  data-service:
+    image: data-service  # Use the image you built locally with the tag 'data-service'
+    container_name: data-service
+    ports:
+      - "8082:8082"
+    networks:
+      - app-network
+    depends_on:
+      - eureka-service
+
+  eureka-service:
+    image: eureka-service  # Use the image you built locally with the tag 'eureka-service'
+    container_name: eureka-service
+    ports:
+      - "8761:8761"
+    networks:
+      - app-network
+
+  user-invite-service:
+    image: user-invite-service  # Use the image you built locally with the tag 'user-invite-service'
+    container_name: user-invite-service
+    ports:
+      - "8083:8083"
+    networks:
+      - app-network
+    depends_on:
+      - eureka-service
+
+networks:
+  app-network:
+    driver: bridge

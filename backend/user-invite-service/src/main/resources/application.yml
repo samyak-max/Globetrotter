@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: user-invite-service
+  data:
+    mongodb:
+      uri: mongodb+srv://samyakchoudhary9:Qgq2eArIhs2meKKB@cluster0.rqxtd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: user_invite_db
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

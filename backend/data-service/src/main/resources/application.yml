@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: data-service
+  data:
+    mongodb:
+      uri: mongodb+srv://samyakchoudhary9:Qgq2eArIhs2meKKB@cluster0.rqxtd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: city_data_db
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+ai-service:
+  url: http://localhost:8081
