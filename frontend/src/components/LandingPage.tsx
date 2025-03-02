@@ -31,7 +31,7 @@ export default function LandingPage() {
     }
 
     // Fetch cities data
-    fetch("http://13.203.197.215:8081/cities")
+    fetch("http://13.235.33.123:8081/cities")
       .then((res) => res.json())
       .then((data) => setCities(data))
       .catch((error) => console.error("Error fetching cities:", error));
