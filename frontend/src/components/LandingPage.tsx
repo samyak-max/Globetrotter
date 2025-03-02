@@ -31,7 +31,7 @@ export default function LandingPage() {
     }
 
     // Fetch cities data
-    fetch("http://13.203.197.215:8081/cities")
+    fetch("/ai/cities")
       .then((res) => res.json())
       .then((data) => setCities(data))
       .catch((error) => console.error("Error fetching cities:", error));
@@ -39,7 +39,7 @@ export default function LandingPage() {
 
   const handleInvite = async (username: string) => {
     try {
-      const response = await fetch(`http://13.126.11.209:8083/user-invite/${username}`);
+      const response = await fetch(`user/user-invite/${username}`);
       if (!response.ok) {
         if (response.status === 404) {
           throw new Error("User not found");
