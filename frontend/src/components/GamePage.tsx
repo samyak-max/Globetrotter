@@ -48,7 +48,7 @@ export default function GamePage() {
     if (cityQueue.length === 0) return;
 
     const nextCity = cityQueue[0];
-    fetch(`data/city-data/fetch?city=${nextCity}`)
+    fetch(`http://65.2.177.171:8082/city-data/fetch?city=${nextCity}`)
       .then((res) => res.json())
       .then((data: CityData) => {
         setCurrentCity(data.city);
@@ -96,11 +96,11 @@ export default function GamePage() {
     const discriminator = Math.floor(1000 + Math.random() * 9000);
     const uniqueUsername = `${user}-${discriminator}`;
     try {
-        const response = await fetch(`/user/user-invite?username=${uniqueUsername}&highScore=${correctAnswers}`, {
+        const response = await fetch(`http://13.126.11.209:8083/user-invite?username=${uniqueUsername}&highScore=${correctAnswers}`, {
           method: "POST",
         });
         if (response.ok) {
-          const inviteText = `🔥 I scored ${correctAnswers} in Globetrotter! Can you beat me? 🌍 Play now: https://globetrotter-game.com/invite/${uniqueUsername}`;
+          const inviteText = `🔥 I scored ${correctAnswers} in Globetrotter! Can you beat me? 🌍 Play now: https://globetrotter-usht.onrender.com/invite/${uniqueUsername}`;
           const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(inviteText)}`;
           window.open(whatsappUrl, "_blank");
         } else {
