@@ -89,6 +89,7 @@ export default function LandingPage() {
         </div>
         <img src={globeGif} alt="Spinning Globe" className="w-32 h-32 mb-4 object-contain" />
         <h1 className="text-3xl font-bold mb-4">Welcome to Globetrotter 🌍</h1>
+          <p className="mb-4 text-xs italic">Please allow insecure connection from site settings, to load the cities.</p>
         <p className="text-sm mb-4">Select cities to get started:</p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
           {cities.map(({ city }) => (
