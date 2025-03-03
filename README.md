@@ -4,7 +4,7 @@ _Because of Mixed Content (HTTP backend, HTTPS frontend), please allow insecure 
 # Backend:
 ## **Overview**
 
-This project consists of multiple microservices that together form "The Globetrotter Challenge – The Ultimate Travel Guessing Game!" Each microservice is responsible for a specific part of the application and they communicate with each other using REST APIs and Feign clients.
+This project consists of multiple microservices that together form "The Globetrotter Challenge – The Ultimate Travel Guessing Game!" Each microservice is responsible for a specific part of the application and they communicate with each other using REST APIs and Feign clients. The backend is deployed on **AWS ECS** container, using **Fargate**.
 
 ## **Microservices**
 
@@ -115,3 +115,44 @@ Each microservice has its own dependencies defined in their respective pom.xml�
 - Spring Data MongoDB
 - Spring Cloud Netflix Eureka
 - Spring Cloud OpenFeign
+
+# Forntend:
+Globetrotter is a web application built with React, TypeScript, and Vite. It allows users to play a game where they guess cities based on clues and challenge their friends. It is hosted on render. 
+
+### **Installation**
+To install the project dependencies, run:
+npm install
+
+### **Development**
+To start the development server, run:
+npm run dev
+
+### **Build**
+To build the project for production, run:
+npm run build
+
+## **Components**
+
+### **LandingPage**
+
+The LandingPage component is the main entry point of the application. It allows users to select cities and start the game. See LandingPage.tsx.
+
+### **GamePage**
+
+The GamePage component handles the game logic, including fetching city data, displaying clues, and handling user answers. See GamePage.tsx.
+
+### **UI Components**
+
+The ui directory contains reusable UI components such as buttons, dialogs, inputs, selects, switches, and more.
+
+## **Context**
+
+### **ThemeContext**
+
+The ThemeContext provides a way to manage and toggle between light and dark themes. See ThemeContext.tsx.
+
+## **Utilities**
+
+### **cn**
+
+The cn function in utils.ts is a utility function for combining class names using clsx and `tailwind-merge`. See utils.ts.
