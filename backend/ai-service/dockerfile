@@ -3,12 +3,13 @@ FROM eclipse-temurin:23-jdk as builder
 
 # Set working directory inside the container
 WORKDIR /app
-RUN chmod +x mvnw
+
 # Copy Maven project files
 COPY pom.xml mvnw ./
 COPY .mvn .mvn
 COPY src ./src
 
+RUN chmod +x mvnw
 # Build the application
 RUN ./mvnw clean package -DskipTests
 
