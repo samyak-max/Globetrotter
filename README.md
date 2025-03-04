@@ -95,7 +95,7 @@ This will build and start all the microservices defined in the docker-compose.y
 
 ### **AI Service**
 
-- **API Key**: Set the `gemini.api.key` property in the application properties file. Runs on port 8081
+- **API Key**: Set the `gemini.api.key` property in the application properties file. Runs on port `8081`.
 
 ### **Eureka Service**
 
@@ -119,8 +119,8 @@ Each microservice has its own dependencies defined in their respective pom.xml�
 - Spring Cloud Netflix Eureka
 - Spring Cloud OpenFeign
 
-# Forntend:
-Globetrotter is a web application built with React, TypeScript, and Vite. It allows users to play a game where they guess cities based on clues and challenge their friends. It is hosted on render. 
+# Frontend:
+Globetrotter is a web application built with React, TypeScript, and Vite. It allows users to play a game where they guess cities based on clues and challenge their friends. It is hosted on **render**. 
 
 ### **Installation**
 To install the project dependencies, run:
