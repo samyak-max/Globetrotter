@@ -14,7 +14,8 @@ const ThemeContext = createContext<ThemeContextType>({
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     // Persist theme in localStorage
-    return localStorage.getItem("theme") === "dark";
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme ? storedTheme === "dark" : true;
   });
 
   useEffect(() => {
