@@ -6,6 +6,9 @@ _Because of Mixed Content (HTTP backend, HTTPS frontend), please allow insecure 
 
 This project consists of multiple microservices that together form "The Globetrotter Challenge – The Ultimate Travel Guessing Game!" Each microservice is responsible for a specific part of the application and they communicate with each other using REST APIs and Feign clients. The backend is deployed on **AWS ECS** container, using **Fargate**.
 
+![image](https://github.com/user-attachments/assets/85cb790a-bd3d-4dd1-8acc-ffa6361679c1)
+
+
 ## **Microservices**
 
 ### **1. AI Service**
