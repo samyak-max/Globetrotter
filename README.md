@@ -4,9 +4,9 @@ _Because of Mixed Content (HTTP backend, HTTPS frontend), please allow insecure 
 # Backend:
 ## **Overview**
 
-This project consists of multiple microservices that together form "The Globetrotter Challenge – The Ultimate Travel Guessing Game!" Each microservice is responsible for a specific part of the application and they communicate with each other using REST APIs and Feign clients. The backend is deployed on **AWS ECS** container, using **Fargate**.
+This project consists of multiple microservices that together form "The Globetrotter Challenge – The Ultimate Travel Guessing Game!" Each microservice is responsible for a specific part of the application and they communicate with each other using REST APIs and Feign clients. The backend is deployed on **AWS ECS** cluster, using **Fargate** 🚀.
 
-![image](https://github.com/user-attachments/assets/85cb790a-bd3d-4dd1-8acc-ffa6361679c1)
+![image](https://github.com/user-attachments/assets/d381d563-6b89-454e-ab65-7279ad1ab20b)
 
 
 ## **Microservices**
@@ -90,6 +90,12 @@ This will build and start all the microservices defined in the docker-compose.y
 
 - **Populate City Data**: `GET /city-data/populate`
 - **Fetch City Data**: `GET /city-data/fetch?city={city}`
+
+### **User Invite Service**
+
+- **Add user to db**: `POST /user-invite?username={username}&highscore={highscore}`
+- **Get highscore of a user**: `GET /user-invite/{username}`
+- **Update the invite count by one**: `PATCH /user-invite/{username}`
 
 ## **Configuration**
 
